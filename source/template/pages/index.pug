@@ -21,5 +21,4 @@ block content
 		.parallax#parallax
 			- var n = 1
 			while n < 11
-				.parallax__layer
-					img(src=`/assets/img/mountains/layer_${n++}.png` alt="Parallax - Mountains")
+				div(class=`parallax__layer parallax__mountains_l${n++}`)

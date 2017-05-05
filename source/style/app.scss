@@ -11,5 +11,13 @@ body {
     overflow: hidden;
 }
 
+@mixin parallax-background($url, $bgSize: cover) {
+    background-image: url($url);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: $bgSize;
+}
+
 @import "common/parallax";
 @import "common/mountains";
+@import "common/forest";

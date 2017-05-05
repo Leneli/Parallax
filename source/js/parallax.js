@@ -11,8 +11,12 @@ window.onload = function() {
 			initialY = (window.innerHeight / 2) - e.pageY;
 
 		for(let i = 0; i < layers.length; i++) {
-			let divider = i / 100,
-				X = initialX * divider,
+			let divider;
+
+			if(layers.length >= 5) divider = i / 100;
+			else divider = (i + 1) / 100;
+
+			let X = initialX * divider,
 				Y = initialY * divider,
 				bottom = (window.innerHeight / 2) * divider,
 				transformStyle = "translate3d(" + X + "px, " + Y + "px, " + "0)";
@@ -25,6 +29,3 @@ window.onload = function() {
 
 	window.addEventListener("mousemove", moveLaers);
 };
-
-
-

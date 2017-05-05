@@ -1,1 +1,12 @@
-.parallax__mountains {}
+.parallax__mountains {
+	&_l1  { @include parallax-background("/assets/img/mountains/layer_1.png"); }
+	&_l2  { @include parallax-background("/assets/img/mountains/layer_2.png"); }
+	&_l3  { @include parallax-background("/assets/img/mountains/layer_3.png"); }
+	&_l4  { @include parallax-background("/assets/img/mountains/layer_4.png"); }
+	&_l5  { @include parallax-background("/assets/img/mountains/layer_5.png"); }
+	&_l6  { @include parallax-background("/assets/img/mountains/layer_6.png"); }
+	&_l7  { @include parallax-background("/assets/img/mountains/layer_7.png"); }
+	&_l8  { @include parallax-background("/assets/img/mountains/layer_8.png"); }
+	&_l9  { @include parallax-background("/assets/img/mountains/layer_9.png"); }
+	&_l10 { @include parallax-background("/assets/img/mountains/layer_10.png");}
+}
