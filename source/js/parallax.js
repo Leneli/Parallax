@@ -1,21 +1,27 @@
 "use strict";
 
 window.onload = function() {
-	let parallax = document.getElementById("parallax");
+	let //parallax = document.getElementById("parallax"),
+		layers = document.getElementsByClassName("parallax__layer");
 
 
 	let moveLaers = function(e) {
 		e = e || event;
 
-		let pageX = e.pageX,
-			pageY = e.pageY,
-			initialX = (window.innerWidth / 2) - pageX,
-			initialY = (window.innerHeight / 2) - pageY;
-		
-		let layer = parallax.lastElementChild,
-			stl = layer.style;
+		let initialX = (window.innerWidth / 2) - e.pageX,
+			initialY = (window.innerHeight / 2) - e.pageY;
 
-		stl.transform = "translate3d(" + initialX + "px, " + initialY + "px, " + "0)";
+		for(let i = 0; i < layers.length; i++) {
+			let divider = i / 100,
+				X = initialX * divider,
+				Y = initialY * divider,
+				bottom = (window.innerHeight / 2) * divider,
+				transformStyle = "translate3d(" + X + "px, " + Y + "px, " + "0)";
+
+			layers[i].style.transform = transformStyle;
+			layers[i].style.bottom = "-" + bottom + "px";
+			//console.log(layers[i]);
+		}
 
 		//console.log(parallax.lastElementChild);
 	};
