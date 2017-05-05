@@ -10,7 +10,14 @@ block variables
 block content
 	.wrapper
 
+		//- картинки в img
+		//-.parallax#parallax
+			- var n = 1
+			while n < 11
+				.parallax__layer
+					img(src=`/assets/img/mountains/layer_${n++}.png` alt="Parallax - Mountains")
 
+		//- картинки в бэкграунде
 		.parallax#parallax
 			- var n = 1
 			while n < 11

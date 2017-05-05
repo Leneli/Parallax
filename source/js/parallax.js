@@ -1,8 +1,7 @@
 "use strict";
 
 window.onload = function() {
-	let //parallax = document.getElementById("parallax"),
-		layers = document.getElementsByClassName("parallax__layer");
+	let layers = document.getElementsByClassName("parallax__layer");
 
 
 	let moveLaers = function(e) {
@@ -20,13 +19,10 @@ window.onload = function() {
 
 			layers[i].style.transform = transformStyle;
 			layers[i].style.bottom = "-" + bottom + "px";
-			//console.log(layers[i]);
 		}
-
-		//console.log(parallax.lastElementChild);
 	};
 
-	
+
 	window.addEventListener("mousemove", moveLaers);
 };
 
