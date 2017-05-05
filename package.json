@@ -28,5 +28,7 @@
   },
   "dependencies": {
     "normalize.css": "~5.0.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/Leneli/Gulp-builder.git"
 }
